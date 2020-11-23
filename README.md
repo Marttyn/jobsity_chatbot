@@ -20,7 +20,7 @@ The following dependencies was used in this project
 
 2- Execute "composer install" to install all dependencies
 
-3- Execute "php artisan migrate:fresh" to create the tables on the database
+3- Execute "php artisan migrate:fresh" to create the tables in the database
 
 4- Execute "php artisan serve" to initiate the Laravel development server
 
