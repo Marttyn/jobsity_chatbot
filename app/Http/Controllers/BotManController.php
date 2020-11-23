@@ -9,7 +9,6 @@ use App\Conversations\SignInConversation;
 use App\Conversations\WithdrawConversation;
 use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
-use App\Conversations\ExampleConversation;
 use App\Conversations\BalanceConversation;
 
 class BotManController extends Controller

@@ -2,6 +2,7 @@
 
 namespace App\Conversations;
 
+use App\Accounts;
 use App\User;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\BotMan\Messages\Incoming\Answer;
@@ -103,9 +104,10 @@ class SignInConversation extends Conversation
             } else {
                 $this->say('Great - that is all we need, ' . $this->user->name);
 
-                $this->account_number = sprintf("%06d", mt_rand(1, 999999));
-
                 $this->user->save();
+
+                $this->account_number = sprintf("%06d", $this->user->id+1);
+
                 $this->user->account()->create([
                     'number' => $this->account_number,
                     'balance' => $this->account_balance,
